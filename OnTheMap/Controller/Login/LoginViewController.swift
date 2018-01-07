@@ -12,7 +12,10 @@ class LoginViewController: UIViewController
 {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    
+    let signUpURL = URL(string: "https://www.udacity.com/account/auth#!/signup")
     
     override func viewDidLoad()
     {

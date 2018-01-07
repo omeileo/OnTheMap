@@ -14,7 +14,9 @@ extension LoginViewController
     {
         makeFormElementsRound()
         configureFormFields()
-        loginButton.isEnabled = false
+        configureLoginButton()
+        
+        errorMessageLabel.isHidden = true
     }
     
     func makeFormElementsRound ()
@@ -31,15 +33,33 @@ extension LoginViewController
     
     func configureFormFields ()
     {
-        usernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        usernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingDidEnd)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingDidEnd)
+    }
+    
+    func configureLoginButton ()
+    {
+        enableLoginButton(bool: false)
+        
+        loginButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        loginButton.layer.shadowOpacity = 1.0
+        loginButton.layer.shadowRadius = 10.0
+        loginButton.layer.masksToBounds = false
+    }
+    
+    func enableLoginButton (bool: Bool)
+    {
+        loginButton.isEnabled = bool
+        loginButton.backgroundColor = bool == true ? UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.75)
+        
     }
     
     @objc func textFieldDidChange (_ textField: UITextField)
     {
-        if usernameTextField.hasText && passwordTextField.hasText
-        {
-            loginButton.isEnabled = true
-        }
+        enableLoginButton(bool: (usernameTextField.hasText && passwordTextField.hasText) ? true : false)
     }
 }

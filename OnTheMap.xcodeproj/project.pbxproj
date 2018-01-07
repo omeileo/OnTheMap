@@ -10,6 +10,8 @@
 		F30BCDCA2001EB2300267C91 /* LoginViewController+ModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BCDC92001EB2300267C91 /* LoginViewController+ModifyView.swift */; };
 		F30BCDCD2001ECF300267C91 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BCDCC2001ECF300267C91 /* UIViewController+Utils.swift */; };
 		F30BCDCF2001F1F500267C91 /* LoginViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BCDCE2001F1F500267C91 /* LoginViewController+UITextFieldDelegate.swift */; };
+		F30BCDD42002C62B00267C91 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BCDD32002C62B00267C91 /* ErrorMessage.swift */; };
+		F30BCDD62002C6C200267C91 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BCDD52002C6C200267C91 /* StudentInformation.swift */; };
 		F3FBFDE62001D9C7002E7F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FBFDE52001D9C7002E7F0B /* AppDelegate.swift */; };
 		F3FBFDE82001D9C7002E7F0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FBFDE72001D9C7002E7F0B /* LoginViewController.swift */; };
 		F3FBFDEB2001D9C7002E7F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FBFDE92001D9C7002E7F0B /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 		F30BCDC92001EB2300267C91 /* LoginViewController+ModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+ModifyView.swift"; sourceTree = "<group>"; };
 		F30BCDCC2001ECF300267C91 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Utils.swift"; path = "../../../../../Never Forget/Never Forget/UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		F30BCDCE2001F1F500267C91 /* LoginViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		F30BCDD32002C62B00267C91 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		F30BCDD52002C6C200267C91 /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
 		F3FBFDE22001D9C7002E7F0B /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FBFDE52001D9C7002E7F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3FBFDE72001D9C7002E7F0B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		F3FBFDF72001DA5A002E7F0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F30BCDD32002C62B00267C91 /* ErrorMessage.swift */,
+				F30BCDD52002C6C200267C91 /* StudentInformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30BCDD62002C6C200267C91 /* StudentInformation.swift in Sources */,
 				F30BCDCD2001ECF300267C91 /* UIViewController+Utils.swift in Sources */,
 				F3FBFDE82001D9C7002E7F0B /* LoginViewController.swift in Sources */,
 				F30BCDCF2001F1F500267C91 /* LoginViewController+UITextFieldDelegate.swift in Sources */,
 				F30BCDCA2001EB2300267C91 /* LoginViewController+ModifyView.swift in Sources */,
+				F30BCDD42002C62B00267C91 /* ErrorMessage.swift in Sources */,
 				F3FBFDE62001D9C7002E7F0B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
